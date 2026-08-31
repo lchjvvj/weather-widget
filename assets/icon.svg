@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 128" width="128" height="128">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a1a2e"/>
+      <stop offset="100%" style="stop-color:#252540"/>
+    </linearGradient>
+    <linearGradient id="sun" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#f7971e"/>
+      <stop offset="100%" style="stop-color:#ffd200"/>
+    </linearGradient>
+  </defs>
+  <!-- 背景圆角矩形 -->
+  <rect x="4" y="4" width="120" height="120" rx="20" ry="20" fill="url(#bg)" stroke="#3a3a5a" stroke-width="2"/>
+  <!-- 太阳 -->
+  <circle cx="50" cy="50" r="22" fill="url(#sun)"/>
+  <!-- 太阳光晕 -->
+  <circle cx="50" cy="50" r="28" fill="none" stroke="#f7971e" stroke-width="2" opacity="0.3"/>
+  <!-- 云朵 -->
+  <ellipse cx="80" cy="65" rx="25" ry="15" fill="#ffffff" opacity="0.9"/>
+  <ellipse cx="70" cy="60" rx="15" ry="12" fill="#ffffff" opacity="0.9"/>
+  <ellipse cx="90" cy="60" rx="12" ry="10" fill="#ffffff" opacity="0.9"/>
+  <!-- 温度计文字 -->
+  <text x="64" y="105" font-family="Arial" font-size="16" font-weight="bold" fill="#ffffff" text-anchor="middle">25°</text>
+</svg>
