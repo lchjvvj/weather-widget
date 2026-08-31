@@ -1,0 +1,16 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.egg-info/
+dist/
+build/
+
+# 系统文件
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+
+# 配置（保留模板，排除用户数据）
+# 用户配置在 ~/.config/weather-widget/ 下，不会出现在仓库中
