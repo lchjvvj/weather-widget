@@ -3,11 +3,14 @@
 # 天气桌面小工具 - 推送到 GitHub 脚本
 # ============================================================
 # 使用方法:
-#   1. 在 GitHub 上创建仓库: https://github.com/new
-#      仓库名: weather-widget
-#      描述: 多城市同屏天气桌面插件 - 实时天气+3天预报
-#      不要勾选 README/.gitignore/LICENSE（已存在）
-#   2. 运行本脚本，填入你的 GitHub 用户名
+#   方式一（推荐）: 使用环境变量传入 Token，不落盘
+#       export GITHUB_TOKEN=ghp_xxx
+#       ./push_to_github.sh
+#   方式二: 交互式输入 GitHub 用户名后按提示操作
+#
+#   前置条件:
+#   - 已安装 git（若未安装，请使用 push_to_github.py）
+#   - GitHub 仓库 weather-widget 已创建（或使用脚本创建）
 # ============================================================
 
 set -e

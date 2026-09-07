@@ -14,9 +14,11 @@
 
 作者: 小U同学 × WangWq
 版本: 2.0.0
+协议: MIT License (见项目根目录 LICENSE 文件)
 """
 
 __version__ = "2.0.0"
 __author__ = "小U同学 × WangWq"
 __description__ = "多城市桌面天气小工具"
 __license__ = "MIT"
+__copyright__ = "Copyright (c) 2026 小U同学 × WangWq"

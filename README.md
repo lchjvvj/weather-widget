@@ -197,6 +197,53 @@ GET https://wttr.in/{city}?format=j1
 - 🎉 初始版本：支持三城同屏天气显示
 - 🎉 支持 北京、河北迁安、海南乐东
 
+
+## 🔧 可复现构建说明
+
+本项目使用标准 Python 工具链，可按以下步骤**从源码可复现构建**：
+
+### 环境准备
+```bash
+# Python 3.8+（推荐 3.10+）
+python3 --version
+
+# 创建独立虚拟环境（推荐，避免污染系统环境）
+python3 -m venv .venv
+source .venv/bin/activate
+```
+
+### 安装锁定依赖
+```bash
+# requirements.txt 已锁定全部依赖版本，保证构建一致性
+pip install --upgrade pip
+pip install -r requirements.txt
+```
+
+### 运行与验证
+```bash
+# 语法检查（应无任何输出/错误）
+python3 -m py_compile src/*.py
+
+# 启动应用
+python3 src/main.py
+
+# 单元自检（验证天气 API 连通性）
+python3 -c "from src.weather_api import get_weather_data; print(get_weather_data([('北京','北京')]))"
+```
+
+### 打包发布
+```bash
+# 一键安装（生成桌面快捷方式 + 开机自启）
+chmod +x setup.sh && ./setup.sh install
+
+# 构建发布包
+zip -r weather-widget-v2.0.0.zip . -x ".git/*" -x "*__pycache__*" -x "*.pyc"
+```
+
+> **可复现性说明**：`requirements.txt` 中所有依赖均以 `==` 锁定精确版本，
+> 配合虚拟环境即可在任意 Linux 发行版上获得一致的构建结果。
+
+
 ## 🔜 未来计划
 
 - [ ] 天气预警通知（暴雨、高温等极端天气提醒）
@@ -211,6 +258,12 @@ GET https://wttr.in/{city}?format=j1
 - 基于 Deepin Desktop Environment 开发
 - 数据源: [wttr.in](https://wttr.in)
 
-## 📄 许可证
+## 📄 开源协议
 
-本项目仅供学习交流使用
+本项目基于 **MIT License** 开源发布，详见 [LICENSE](LICENSE) 文件。
+
+- 允许自由使用、修改、分发（含商用）
+- 需保留原始版权声明
+- 作者不对软件使用后果承担任何责任
+
+> 作者：小U同学 × WangWq  |  Copyright (c) 2026
